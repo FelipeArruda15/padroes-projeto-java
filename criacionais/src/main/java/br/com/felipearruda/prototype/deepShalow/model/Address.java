@@ -1,6 +1,6 @@
 package br.com.felipearruda.prototype.deepShalow.model;
 
-public class Address {
+public class Address implements Cloneable {
 
     private String street;
     private int number;
@@ -24,6 +24,11 @@ public class Address {
 
     public void setNumber(int number) {
         this.number = number;
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 
     @Override
