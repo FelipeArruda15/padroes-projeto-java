@@ -2,12 +2,10 @@ package adapter.hexagonal.core.usecases;
 
 import java.util.List;
 
-import javax.swing.text.html.HTMLDocument.BlockElement;
-
 import adapter.hexagonal.core.model.User;
 import adapter.hexagonal.core.port.UserRepository;
 
-public class UserService {
+public abstract class UserService {
 
     private UserRepository userRepo;
 
