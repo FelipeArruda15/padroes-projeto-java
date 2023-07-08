@@ -10,7 +10,7 @@ import java.util.Map;
 import facade.callCenter.model.Card;
 import facade.callCenter.model.Register;
 
-public class RegisterService {
+class RegisterService {
 	private Map<Long, List<Register>> memory;
 
 	public RegisterService() {

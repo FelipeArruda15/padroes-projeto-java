@@ -5,7 +5,7 @@ import java.util.List;
 import facade.callCenter.model.Card;
 import facade.callCenter.model.Register;
 
-public class SecurityService {
+class SecurityService {
 	private CardService cardService;
 	private RegisterService registerService;
 
