@@ -1,19 +1,14 @@
 package flyweight.musicPlayer.model;
 
+import flyweight.musicPlayer.musicFlyweigth.MusicFlyweight;
+
 public class Music {
 
-    // Valores que não vão variar
-    private String name;
-    private String artist;
-    private Integer durationInSeconds;
-
-    // Valor que pode ser alterado
+    private MusicFlyweight musicFlyweight;
     private Integer playerQty;
 
-    public Music(String name, String artist, Integer durationInSeconds) {
-        this.name = name;
-        this.artist = artist;
-        this.durationInSeconds = durationInSeconds;
+    public Music(MusicFlyweight musicFlyweight) {
+        this.musicFlyweight = musicFlyweight;
         this.playerQty = 0;
     }
 
@@ -21,28 +16,12 @@ public class Music {
         playerQty++;
     }
 
-    public String getName() {
-        return name;
+    public MusicFlyweight getMusicFlyweight() {
+        return musicFlyweight;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getArtist() {
-        return artist;
-    }
-
-    public void setArtist(String artist) {
-        this.artist = artist;
-    }
-
-    public Integer getDurationInSeconds() {
-        return durationInSeconds;
-    }
-
-    public void setDurationInSeconds(Integer durationInSeconds) {
-        this.durationInSeconds = durationInSeconds;
+    public void setMusicFlyweight(MusicFlyweight musicFlyweight) {
+        this.musicFlyweight = musicFlyweight;
     }
 
     public Integer getPlayerQty() {
@@ -51,6 +30,11 @@ public class Music {
 
     public void setPlayerQty(Integer playerQty) {
         this.playerQty = playerQty;
+    }
+
+    @Override
+    public String toString() {
+        return "Music [musicFlyweight=" + musicFlyweight + ", playerQty=" + playerQty + "]";
     }
 
 }
