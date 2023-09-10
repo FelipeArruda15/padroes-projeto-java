@@ -1,15 +1,18 @@
 package observer.aniversarioSurpresa;
 
-import observer.aniversarioSurpresa.observer.Namorada;
-import observer.aniversarioSurpresa.observer.Porteiro;
+import observer.aniversarioSurpresa.observer.Dorman;
+import observer.aniversarioSurpresa.observer.Friend;
+import observer.aniversarioSurpresa.observer.Wife;
 
 public class Client {
     public static void main(String[] args) throws Exception {
-        Namorada namorada = new Namorada();
-        Porteiro porteiro = new Porteiro();
+        Dorman dorman = new Dorman();
+        dorman.addObserver(new Wife());
+        dorman.addObserver(new Friend());
 
-        porteiro.addChegadaAniversarianteObserver(namorada);
-
-        porteiro.run();
+        System.out.println("Husband is comming!");
+        dorman.setStatus(true);
+        dorman.setStatus(false);
+        dorman.setStatus(true);
     }
 }
